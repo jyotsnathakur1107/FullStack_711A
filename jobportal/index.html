@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobHub - Find Your Dream Job</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-icon">💼</span>
+          <h1>JobHub</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#jobs">Jobs</a></li>
+          <li><a href="#companies">Companies</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="auth-btn">Post a Job</button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h2>Find Your Dream Job</h2>
+        <p>
+          Explore thousands of job opportunities with all the information you
+          need.
+        </p>
+
+        <div class="search-container">
+          <div class="search-box">
+            <input
+              type="text"
+              placeholder="Job title, keyword..."
+              class="search-input"
+            />
+            <button class="search-btn">Search</button>
+          </div>
+          <div class="filter-box">
+            <select class="filter-select">
+              <option value="">All Locations</option>
+              <option value="new-york">New York</option>
+              <option value="san-francisco">San Francisco</option>
+              <option value="london">London</option>
+              <option value="tokyo">Tokyo</option>
+            </select>
+            <select class="filter-select">
+              <option value="">All Categories</option>
+              <option value="tech">Technology</option>
+              <option value="finance">Finance</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="design">Design</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Jobs Section -->
+    <section class="featured-section" id="jobs">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Jobs</h2>
+          <p>Top opportunities from leading companies</p>
+        </div>
+
+        <div class="jobs-grid">
+          <!-- Job Card 1 -->
+          <div class="job-card">
+            <div class="job-header">
+              <div class="company-info">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%234A90E2' width='100' height='100'/%3E%3Ctext x='50' y='50' font-size='40' fill='white' text-anchor='middle' dy='.3em'%3EG%3C/text%3E%3C/svg%3E"
+                  alt="Google"
+                  class="company-logo"
+                />
+                <div>
+                  <h3>Senior Frontend Developer</h3>
+                  <p class="company-name">Google</p>
+                </div>
+              </div>
+              <span class="job-type full-time">Full-time</span>
+            </div>
+            <div class="job-details">
+              <span class="location">📍 San Francisco, CA</span>
+              <span class="salary">💰 $150K - $180K</span>
+            </div>
+            <p class="job-description">
+              We're looking for an experienced Frontend Developer to join our
+              team and build amazing user experiences.
+            </p>
+            <div class="job-tags">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">UI/UX</span>
+            </div>
+            <div class="job-footer">
+              <span class="posted-date">Posted 2 days ago</span>
+              <button class="apply-btn">Apply Now</button>
+            </div>
+          </div>
+
+          <!-- Job Card 2 -->
+          <div class="job-card">
+            <div class="job-header">
+              <div class="company-info">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23FF5722' width='100' height='100'/%3E%3Ctext x='50' y='50' font-size='40' fill='white' text-anchor='middle' dy='.3em'%3EA%3C/text%3E%3C/svg%3E"
+                  alt="Amazon"
+                  class="company-logo"
+                />
+                <div>
+                  <h3>Data Scientist</h3>
+                  <p class="company-name">Amazon</p>
+                </div>
+              </div>
+              <span class="job-type contract">Contract</span>
+            </div>
+            <div class="job-details">
+              <span class="location">📍 New York, NY</span>
+              <span class="salary">💰 $140K - $170K</span>
+            </div>
+            <p class="job-description">
+              Join our data science team and help us make data-driven decisions
+              at scale.
+            </p>
+            <div class="job-tags">
+              <span class="tag">Python</span>
+              <span class="tag">ML</span>
+              <span class="tag">AWS</span>
+            </div>
+            <div class="job-footer">
+              <span class="posted-date">Posted 1 day ago</span>
+              <button class="apply-btn">Apply Now</button>
+            </div>
+          </div>
+
+          <!-- Job Card 3 -->
+          <div class="job-card">
+            <div class="job-header">
+              <div class="company-info">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%231877F2' width='100' height='100'/%3E%3Ctext x='50' y='50' font-size='40' fill='white' text-anchor='middle' dy='.3em'%3Ef%3C/text%3E%3C/svg%3E"
+                  alt="Meta"
+                  class="company-logo"
+                />
+                <div>
+                  <h3>Product Manager</h3>
+                  <p class="company-name">Meta</p>
+                </div>
+              </div>
+              <span class="job-type full-time">Full-time</span>
+            </div>
+            <div class="job-details">
+              <span class="location">📍 Menlo Park, CA</span>
+              <span class="salary">💰 $160K - $200K</span>
+            </div>
+            <p class="job-description">
+              Help shape the future of social media as a Product Manager at
+              Meta.
+            </p>
+            <div class="job-tags">
+              <span class="tag">Product</span>
+              <span class="tag">Strategy</span>
+              <span class="tag">Analytics</span>
+            </div>
+            <div class="job-footer">
+              <span class="posted-date">Posted 3 days ago</span>
+              <button class="apply-btn">Apply Now</button>
+            </div>
+          </div>
+
+          <!-- Job Card 4 -->
+          <div class="job-card">
+            <div class="job-header">
+              <div class="company-info">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23E34C26' width='100' height='100'/%3E%3Ctext x='50' y='50' font-size='40' fill='white' text-anchor='middle' dy='.3em'%3EM%3C/text%3E%3C/svg%3E"
+                  alt="Microsoft"
+                  class="company-logo"
+                />
+                <div>
+                  <h3>Backend Developer</h3>
+                  <p class="company-name">Microsoft</p>
+                </div>
+              </div>
+              <span class="job-type full-time">Full-time</span>
+            </div>
+            <div class="job-details">
+              <span class="location">📍 Seattle, WA</span>
+              <span class="salary">💰 $130K - $160K</span>
+            </div>
+            <p class="job-description">
+              Build scalable backend systems for Microsoft's cloud platform
+              services.
+            </p>
+            <div class="job-tags">
+              <span class="tag">C#</span>
+              <span class="tag">.NET</span>
+              <span class="tag">Azure</span>
+            </div>
+            <div class="job-footer">
+              <span class="posted-date">Posted 5 days ago</span>
+              <button class="apply-btn">Apply Now</button>
+            </div>
+          </div>
+
+          <!-- Job Card 5 -->
+          <div class="job-card">
+            <div class="job-header">
+              <div class="company-info">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23FBBC04' width='100' height='100'/%3E%3Ctext x='50' y='50' font-size='40' fill='black' text-anchor='middle' dy='.3em'%3EU%3C/text%3E%3C/svg%3E"
+                  alt="Uber"
+                  class="company-logo"
+                />
+                <div>
+                  <h3>UX/UI Designer</h3>
+                  <p class="company-name">Uber</p>
+                </div>
+              </div>
+              <span class="job-type part-time">Part-time</span>
+            </div>
+            <div class="job-details">
+              <span class="location">📍 San Francisco, CA</span>
+              <span class="salary">💰 $100K - $130K</span>
+            </div>
+            <p class="job-description">
+              Design beautiful and intuitive user interfaces for our mobile
+              applications.
+            </p>
+            <div class="job-tags">
+              <span class="tag">Figma</span>
+              <span class="tag">Design</span>
+              <span class="tag">Mobile</span>
+            </div>
+            <div class="job-footer">
+              <span class="posted-date">Posted 4 days ago</span>
+              <button class="apply-btn">Apply Now</button>
+            </div>
+          </div>
+
+          <!-- Job Card 6 -->
+          <div class="job-card">
+            <div class="job-header">
+              <div class="company-info">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%2334A853' width='100' height='100'/%3E%3Ctext x='50' y='50' font-size='40' fill='white' text-anchor='middle' dy='.3em'%3ET%3C/text%3E%3C/svg%3E"
+                  alt="Tesla"
+                  class="company-logo"
+                />
+                <div>
+                  <h3>DevOps Engineer</h3>
+                  <p class="company-name">Tesla</p>
+                </div>
+              </div>
+              <span class="job-type full-time">Full-time</span>
+            </div>
+            <div class="job-details">
+              <span class="location">📍 Austin, TX</span>
+              <span class="salary">💰 $135K - $165K</span>
+            </div>
+            <p class="job-description">
+              Manage and optimize our cloud infrastructure and deployment
+              pipelines.
+            </p>
+            <div class="job-tags">
+              <span class="tag">Kubernetes</span>
+              <span class="tag">Docker</span>
+              <span class="tag">CI/CD</span>
+            </div>
+            <div class="job-footer">
+              <span class="posted-date">Posted 6 days ago</span>
+              <button class="apply-btn">Apply Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="load-more">
+          <button class="load-more-btn">Load More Jobs</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section class="companies-section" id="companies">
+      <div class="container">
+        <div class="section-header">
+          <h2>Top Companies</h2>
+          <p>Check out job openings from top companies</p>
+        </div>
+
+        <div class="companies-grid">
+          <div class="company-card">
+            <div class="company-avatar">G</div>
+            <h3>Google</h3>
+            <p>142 Open Jobs</p>
+            <button class="company-btn">View Jobs</button>
+          </div>
+          <div class="company-card">
+            <div class="company-avatar amazon">A</div>
+            <h3>Amazon</h3>
+            <p>189 Open Jobs</p>
+            <button class="company-btn">View Jobs</button>
+          </div>
+          <div class="company-card">
+            <div class="company-avatar meta">f</div>
+            <h3>Meta</h3>
+            <p>98 Open Jobs</p>
+            <button class="company-btn">View Jobs</button>
+          </div>
+          <div class="company-card">
+            <div class="company-avatar microsoft">M</div>
+            <h3>Microsoft</h3>
+            <p>167 Open Jobs</p>
+            <button class="company-btn">View Jobs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stat">
+          <h3>50K+</h3>
+          <p>Active Jobs</p>
+        </div>
+        <div class="stat">
+          <h3>500+</h3>
+          <p>Companies</p>
+        </div>
+        <div class="stat">
+          <h3>100K+</h3>
+          <p>Happy Candidates</p>
+        </div>
+        <div class="stat">
+          <h3>25K+</h3>
+          <p>Success Stories</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>JobHub</h4>
+            <p>Your gateway to amazing career opportunities.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#jobs">Browse Jobs</a></li>
+              <li><a href="#companies">Companies</a></li>
+              <li><a href="#about">About Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#">Facebook</a>
+              <a href="#">Twitter</a>
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 JobHub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
