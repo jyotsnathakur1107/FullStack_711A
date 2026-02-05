@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
     <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="nav-container">
@@ -69,6 +70,17 @@
         <div class="section-header">
           <h2>Featured Jobs</h2>
           <p>Top opportunities from leading companies</p>
+        </div>
+
+        <!-- Add New Job Section -->
+        <div class="add-job-section">
+          <h3>Post a New Job Opportunity</h3>
+          <div class="add-job-form">
+            <input type="text" id="jobTitle" placeholder="Job Title (e.g., Senior Developer)" />
+            <input type="text" id="companyName" placeholder="Company Name" />
+            <button onclick="addJob()" class="add-job-btn">+ Post Job</button>
+          </div>
+          <p class="job-counter">Total Jobs Posted: <span id="jobCount">0</span></p>
         </div>
 
         <div class="jobs-grid">
@@ -290,6 +302,8 @@
     </section>
 
     <!-- Companies Section -->
+
+    <script src="script.js"></script>
     <section class="companies-section" id="companies">
       <div class="container">
         <div class="section-header">
