@@ -3,24 +3,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const jobsGrid = document.querySelector(".jobs-grid");
   const jobCountEl = document.getElementById("jobCount");
 
-  // Initialize job count on page load
+  
   updateJobCount();
 
-  // Global function for adding jobs (called from onclick)
   window.addJob = function () {
     const titleInput = document.getElementById("jobTitle");
     const companyInput = document.getElementById("companyName");
     const title = titleInput.value.trim();
     const company = companyInput.value.trim();
 
-    // INPUT VALIDATION
+   
     if (title === "" || company === "") {
       alert("⚠️ Please fill in all fields");
       if (title === "") titleInput.focus();
       return;
     }
 
-    // Check for duplicate job postings
+   
     const existingJobs = Array.from(document.querySelectorAll(".job-card"));
     const isDuplicate = existingJobs.some(
       (job) =>
@@ -33,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Create new job card with proper structure
+    
     const jobCard = document.createElement("div");
     jobCard.className = "job-card";
 
@@ -77,16 +76,15 @@ document.addEventListener("DOMContentLoaded", function () {
     jobsGrid.prepend(jobCard);
     updateJobCount();
 
-    // Clear inputs and show success feedback
     titleInput.value = "";
     companyInput.value = "";
     titleInput.focus();
 
-    // Show success animation
+    
     jobCard.style.animation = "slideIn 0.4s ease-out";
   };
 
-  // Event delegation for apply button clicks
+ 
   document.addEventListener("click", function (e) {
     if (e.target.classList.contains("apply-btn")) {
       const btn = e.target;
@@ -99,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Event delegation for delete button clicks
   document.addEventListener("click", function (e) {
     if (e.target.classList.contains("delete-btn")) {
       const jobCard = e.target.closest(".job-card");
@@ -113,14 +110,53 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Update job count display
+  
   function updateJobCount() {
     const count = document.querySelectorAll(".job-card").length;
     jobCountEl.textContent = count;
   }
+  function updateJobCount() {
+    const count = document.querySelectorAll(".job-card").length;
+    jobCountEl.textContent = count;
+  }
+
+
+  const searchInput = document.querySelector(".search-input");
+  const searchBtn = document.querySelector(".search-btn");
+
+  function filterJobs() {
+    const searchValue = searchInput.value.toLowerCase().trim();
+    const jobCards = document.querySelectorAll(".job-card");
+
+    jobCards.forEach((card) => {
+      const title = card.querySelector("h3").textContent.toLowerCase();
+      const company = card.querySelector(".company-name").textContent.toLowerCase();
+      const location = card.querySelector(".location").textContent.toLowerCase();
+      const description = card.querySelector(".job-description").textContent.toLowerCase();
+      const tags = Array.from(card.querySelectorAll(".tag"))
+        .map(tag => tag.textContent.toLowerCase())
+        .join(" ");
+
+      const combinedText = `${title} ${company} ${location} ${description} ${tags}`;
+
+      if (combinedText.includes(searchValue)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  searchBtn.addEventListener("click", filterJobs);
+  searchInput.addEventListener("keyup", filterJobs);
+  searchInput.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      filterJobs();
+    }
+  });
 });
 
-// Utility function to escape HTML special characters
+
 function escapeHtml(text) {
   const map = {
     "&": "&amp;",
