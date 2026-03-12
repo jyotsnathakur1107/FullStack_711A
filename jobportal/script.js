@@ -125,6 +125,33 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchBtn = document.querySelector(".search-btn");
 
   function filterJobs() {
+    function filterJobs() {
+  const searchValue = searchInput.value.toLowerCase().trim();
+  const jobCards = document.querySelectorAll(".job-card");
+
+  jobCards.forEach((card) => {
+    if (searchValue === "") {
+      card.style.display = "";
+      return;
+    }
+
+    const title = card.querySelector("h3").textContent.toLowerCase();
+    const company = card.querySelector(".company-name").textContent.toLowerCase();
+    const location = card.querySelector(".location").textContent.toLowerCase();
+    const description = card.querySelector(".job-description").textContent.toLowerCase();
+    const tags = Array.from(card.querySelectorAll(".tag"))
+      .map(tag => tag.textContent.toLowerCase())
+      .join(" ");
+
+    const combinedText = `${title} ${company} ${location} ${description} ${tags}`;
+
+    if (combinedText.includes(searchValue)) {
+      card.style.display = "";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
     const searchValue = searchInput.value.toLowerCase().trim();
     const jobCards = document.querySelectorAll(".job-card");
 
@@ -140,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const combinedText = `${title} ${company} ${location} ${description} ${tags}`;
 
       if (combinedText.includes(searchValue)) {
-        card.style.display = "block";
+        card.style.display = "";
       } else {
         card.style.display = "none";
       }
